@@ -14,6 +14,7 @@ public class ObjectMapper {
                 .build();
 
     }
+
     public TeamEntityDto toTeamEntityDto(TeamEntity teamEntity) {
         return   TeamEntityDto.builder()
                 .id(teamEntity.getId())

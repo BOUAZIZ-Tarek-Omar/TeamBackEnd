@@ -53,9 +53,12 @@ public class TeamService {
     }
 
     //Modifier une équipe en base
+
     public TeamEntityDto UpdateTeam(TeamEntityDto teamEntityParameter) {
         this.teamRepository.findById(teamEntityParameter.getId())
                 .orElseThrow(EntityNotFoundException::new);
+
+
 
         return mapper.toTeamEntityDto(this.teamRepository.save(mapper.toTeamEntity(teamEntityParameter)));
 
